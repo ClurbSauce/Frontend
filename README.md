@@ -1,2 +1,2 @@
 # Frontend-
-Cotains source code for Tescrow UI
+Cotains source code for Tezcrow UI
