@@ -1,16 +1,16 @@
 import { Dispatch, SetStateAction, useState, useEffect } from "react";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-// import {
-//   NetworkType
-// } from "@airgap/beacon-sdk";
+import {
+  NetworkType
+} from "@airgap/beacon-sdk";  
 
 type ButtonProps = {
   Tezos: TezosToolkit;
   setWallet: Dispatch<SetStateAction<any>>;
   setUserAddress: Dispatch<SetStateAction<string>>;
   setUserBalance: Dispatch<SetStateAction<number>>;
-  wallet: BeaconWallet;
+  wallet: BeaconWallet; 
 };
 
 const ConnectButton = ({
@@ -58,7 +58,7 @@ const ConnectButton = ({
     const activeAccount = await wallet.client.getActiveAccount();
     if (activeAccount) {
       const userAddress = await wallet.getPKH();
-      await setup(userAddress);
+      await setup(userAddress); 
     }
   }
 
